@@ -31,9 +31,11 @@
       'as.sortable',
       'angularMoment',
       'hc.marked',
-      'mwl.calendar'
+      'mwl.calendar',
+      'pascalprecht.translate'
     ])
     .config(configMdTheme)
+    .config(configTranslations)
     .config(configMarked)
     .config(fixUnhandledRejectionError)
     .run(initGlobalModels)
@@ -49,6 +51,15 @@
     .run(checkIfLatestVersion)
     .run(showWelcomeDialog)
     .run(goToWorkViewIfTasks);
+
+  /* @ngInject */
+  function configTranslations($translateProvider) {
+    $translateProvider.preferredLanguage('en');
+    $translateProvider.useStaticFilesLoader({
+      prefix: './translations/',
+      suffix: '.json'
+    });
+  }
 
   /* @ngInject */
   function configMarked(markedProvider) {

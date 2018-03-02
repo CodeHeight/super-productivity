@@ -36,6 +36,9 @@ module.exports = function(config) {
       'app-src/bower_components/hamsterjs/hamster.js',
       'app-src/bower_components/clipboard/dist/clipboard.js',
       'app-src/bower_components/moment-duration-format/lib/moment-duration-format.js',
+      'app-src/bower_components/angular-translate/angular-translate.js',
+      'app-src/bower_components/angular-translate-once/src/translate-once.js',
+      'app-src/bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
       'app-src/bower_components/angular-mocks/angular-mocks.js',
       'app-src/bower_components/Watch.JS/src/watch.js',
       // endbower
